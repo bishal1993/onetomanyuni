@@ -9,7 +9,9 @@ public class Pet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idNumber;
 
-
+    /**
+     * Many to One direction. deleting pet will not delete Person.
+     */
 
     @ManyToOne
     private Person person;

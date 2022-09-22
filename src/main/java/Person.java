@@ -21,9 +21,9 @@ public class Person {
 
 
     /**
-     * One to One uni direction relation from Person to Passport.
-     * If person is deleted, passport will also be deleted and vice versa.
-     * passport_id_number is column in Person, which contains foreign key fpr table Passport.
+     * One to Many uni direction relation from Person to Pet.
+     * If person is deleted, pet will also be deleted but not others way around.
+     * person_tax_Number is column in Pet, which contains foreign key fpr table Pet.
      */
     @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JoinColumn(name="person_tax_Number")
